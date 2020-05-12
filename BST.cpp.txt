@@ -6,17 +6,17 @@ using namespace std;
 struct node
 {
     struct node  *l=NULL, *r=NULL;		// l->left and r->right
-    int data;
+    int data;					//The nos. you want to store in the tree
 };
-struct node *createnode (int x)
+struct node *createnode (int x)						//function to generate a new node
 {
-    struct node *temp=(struct node*)malloc(sizeof(struct node));
+    struct node *temp=(struct node*)malloc(sizeof(struct node));	//dynamic memory allocation
     temp->data=x;
     temp->l=NULL;
     temp->r=NULL;
     return temp;
 }
-struct node *insert(struct node* root, int x)
+struct node *insert(struct node* root, int x)		//function to insert the data into the tree
 {
     if(root==NULL)
     {
@@ -34,7 +34,7 @@ struct node *insert(struct node* root, int x)
     }
     return root;
 }
-int height(struct node* root)
+int height(struct node* root)				//function that returns the height of the tree
 {
     if(root==NULL)
     return -1;
@@ -46,7 +46,7 @@ int height(struct node* root)
         return (max(hl,hr) + 1);
     }
 }
-void inorder(struct node* root)
+void inorder(struct node* root)				//The inorder traversal
 {
     if(root==NULL)
     return;
@@ -57,12 +57,12 @@ void inorder(struct node* root)
     
     
 }
-int main()
+int main()						//main function
 {
-    // char ch='y';
+    
     struct node *root=NULL;
     int n;
-    // no. of nodes.
+    // no. of nodes=n.
     cin>>n;
     for(int i=0;i<n;i++)
     {
