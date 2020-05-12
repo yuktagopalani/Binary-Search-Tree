@@ -2,9 +2,10 @@
 
 #include<bits/stdc++.h>
 using namespace std;
+
 struct node
 {
-    struct node  *l=NULL, *r=NULL;
+    struct node  *l=NULL, *r=NULL;		// l->left and r->right
     int data;
 };
 struct node *createnode (int x)
