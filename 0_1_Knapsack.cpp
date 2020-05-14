@@ -9,7 +9,7 @@ int main()
     
     long long int n,W;
     cin>>n>>W;
-    long long int v[n+1],w[n+1];
+    long long int v[n+1],w[n+1];		//values,weight
     
     for(long long int i=1;i<=n;i++)
     {
